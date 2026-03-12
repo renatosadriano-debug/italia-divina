@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Mapa das Igrejas da Itália</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* BASE */
+
+body{
+margin:0;
+height:100vh;
+
+font-family:"Playfair Display", serif;
+
+background-image:url("coliseu.jpg");
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 8vw;
+
+overflow:hidden;
+}
+
+
+/* CAIXA DE TEXTO */
+
+.texto{
+
+width:450px;
+
+background:rgba(0,0,0,0.42);
+
+padding:34px 36px;
+
+border-radius:8px;
+
+color:#F4A81C;
+
+text-align:justify;
+
+}
+
+
+/* TITULO */
+
+.texto h1{
+
+font-size:40px;
+
+line-height:1.2;
+
+margin:0;
+
+font-weight:700;
+
+letter-spacing:0.5px;
+
+color:#F9AC1E;
+
+}
+
+
+/* TEXTO */
+
+.texto p{
+
+font-size:18px;
+
+line-height:1.7;
+
+margin-top:14px;
+
+}
+
+
+/* MAPA */
+
+.mapa{
+
+position:relative;
+
+width:560px;
+
+}
+
+
+/* SVG MAPA */
+
+.mapa svg{
+
+image-rendering:crisp-edges;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TEXTO -->
+
+<div class="texto">
+
+<h1>Descubra as Igrejas mais impressionantes da Itália</h1>
+
+<p>
+Da grandiosidade de Roma às joias escondidas que poucos viajantes conhecem, cada região da Itália guarda igrejas que atravessaram séculos de arte, fé e história.
+</p>
+
+<p>
+Comece por Roma e inicie essa jornada. Clique no mapa.
+</p>
+
+</div>
+
+<!-- MAPA -->
+
+<div class="mapa">
+
+<svg viewBox="0 0 600 900" width="560">
+
+<!-- MAPA DA ITÁLIA -->
+
+<image href="mapa-italia-transparente.png" width="600" height="900"/>
+
+
+<!-- AREA CLICÁVEL DO LAZIO -->
+
+<a href="../lazio/lazio.html">
+
+<title>Ir para Roma</title>
+
+<path
+d="M270 380
+L310 380
+L350 380
+L350 430
+L370 480
+L330 480
+L290 480
+L250 430
+L260 380 Z"
+
+fill="transparent"
+stroke="none"
+cursor="pointer"/>
+
+</a>
+
+</svg>
+
+</div>
+
+</body>
+
+</html>

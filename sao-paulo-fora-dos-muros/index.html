@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Basílica de São Paulo Fora dos Muros</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#F5A623;
+}
+
+body{
+margin:0;
+background:#0b0b0d;
+color:white;
+font-family:Inter;
+}
+
+.container{
+max-width:1500px;
+margin:auto;
+padding:30px;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+margin-bottom:25px;
+}
+
+.hero img{
+width:100%;
+height:460px;
+object-fit:cover;
+border-radius:14px;
+}
+
+.btn-voltar{
+position:absolute;
+top:-27px;
+left:-10px;
+
+padding:3px 14px;
+
+font-size:14px;
+color:var(--gold);
+text-decoration:none;
+
+backdrop-filter:blur(4px);
+
+transition:0.25s;
+}
+
+
+/* CAIXA DO TEXTO */
+
+.hero-text{
+
+position:absolute;
+bottom:40px;
+left:40px;
+
+max-width:700px;
+
+padding:12px 28px 22px 28px;	
+
+background:rgba(0,0,0,0.35);
+
+border-radius:10px;
+
+}
+
+.hero-text h1{
+font-family:Playfair Display;
+font-size:64px;
+margin:0;
+font-weight:700;
+color:var(--gold);
+
+text-shadow:0 2px 8px rgba(0,0,0,0.6);
+
+}
+
+.hero-info{
+font-size:16px;
+margin-top:10px;
+color:var(--gold);
+
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero-desc{
+margin-top:15px;
+font-size:15px;
+line-height:1.6;
+color:var(--gold);
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
+
+text-align:justify;
+}
+
+/* HEADER GALERIA */
+
+.thumb-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.thumb-title{
+font-size:18px;
+color:var(--gold);
+}
+
+/* MAPS */
+
+.map-link{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--gold);
+text-decoration:none;
+font-size:15px;
+}
+
+.map-icon{
+width:22px;
+}
+
+/* MINIATURAS */
+
+.thumbs{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+margin-top:15px;
+}
+
+.thumbs img{
+width:100%;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.thumbs img:hover{
+transform:scale(1.05);
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:25px;
+margin-top:35px;
+}
+
+.card{
+background:#15151b;
+padding:30px;
+border-radius:12px;
+min-height:320px;
+}
+
+.card-header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:10px;
+}
+
+.icon{
+width:34px;
+height:34px;
+fill:var(--gold);
+}
+
+.card h3{
+margin:0;
+font-size:18px;
+color:var(--gold);
+}
+
+.card p{
+color:#bbb;
+line-height:1.8;
+font-size:14px;
+
+text-align:justify;
+}
+
+.highlight{
+color:var(--gold);
+font-weight:700;
+}
+
+/* GALERIA */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.slider{
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100%;
+}
+
+.slider img{
+max-height:90vh;
+border-radius:12px;
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:60px;
+color:white;
+cursor:pointer;
+padding:20px;
+}
+
+.arrow-left{ left:40px; }
+.arrow-right{ right:40px; }
+
+.close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+cursor:pointer;
+color:white;
+z-index:10000;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<a href="../lazio/lazio.html" class="btn-voltar">
+← Voltar
+</a>
+
+<img src="02-fachada.jpg">
+
+<div class="hero-text">
+
+<h1>Basílica de São Paulo</h1>
+
+<div class="hero-info">
+386 d.C. • Reconstrução no século XIX • Basílica Papal
+</div>
+
+<div class="hero-desc">
+A Basílica de São Paulo Fora dos Muros é uma das quatro grandes basílicas papais de Roma e foi construída sobre o local onde, segundo a tradição cristã, está o túmulo do apóstolo Paulo. Localizada fora das antigas muralhas da cidade, tornou-se um dos principais destinos de peregrinação do cristianismo.
+</div>
+
+</div>
+</div>
+
+<div class="thumb-header">
+
+<div class="thumb-title">
+Imersão Visual
+</div>
+
+<a class="map-link" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Basílica+de+São+Paulo+Fora+dos+Muros+Roma">
+
+<svg class="map-icon" viewBox="0 0 24 24">
+
+<path fill="#F5A623"
+d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+
+<circle cx="12" cy="9" r="3" fill="black"/>
+
+</svg>
+
+Abrir no Google Maps
+
+</a>
+
+</div>
+
+<div class="thumbs">
+
+<img src="01-aerea.jpg" onclick="openGallery(0)">
+<img src="02-fachada.jpg" onclick="openGallery(1)">
+<img src="03-interior.jpg" onclick="openGallery(2)">
+<img src="04-detalhe.jpg" onclick="openGallery(3)">
+<img src="05-cupula.jpg" onclick="openGallery(4)">
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke="#F5A623" stroke-width="2" fill="none"/>
+<path d="M12 7v6l4 2" stroke="#F5A623" stroke-width="2"/>
+</svg>
+
+<h3>CONSTRUÇÃO</h3>
+
+</div>
+
+<p>
+A Basílica de São Paulo Fora dos Muros foi originalmente construída no século IV por ordem do imperador Constantino. A igreja foi erguida sobre o local onde, segundo a tradição cristã, estava o túmulo do apóstolo Paulo. Durante o reinado do imperador Teodósio o templo foi ampliado e transformado em uma das maiores igrejas do mundo cristão. Em 1823 um incêndio devastador destruiu grande parte da basílica medieval. A reconstrução posterior seguiu o modelo arquitetônico original, preservando o estilo monumental da igreja. Hoje o edifício apresenta uma impressionante sequência de colunas e amplos corredores que refletem a grandiosidade da arquitetura religiosa romana.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2v20M5 9h14" stroke="#F5A623" stroke-width="2"/>
+</svg>
+
+<h3>FÉ E TRADIÇÃO</h3>
+
+</div>
+
+<p>
+O local onde a basílica foi construída é tradicionalmente associado ao sepultamento do apóstolo Paulo, martirizado em Roma durante as perseguições do imperador Nero no século I. A presença desse túmulo tornou o templo um dos principais centros de peregrinação do cristianismo. Durante séculos fiéis visitaram o local para rezar junto ao altar erguido sobre o sepulcro do apóstolo. A igreja também desempenhou papel importante nas cerimônias papais e na vida religiosa da cidade de Roma. Até hoje a basílica permanece como um símbolo da missão apostólica de São Paulo e de sua influência na expansão do cristianismo.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2L14.5 8L21 9L16 13L17.5 20L12 17L6.5 20L8 13L3 9L9.5 8Z"/>
+<circle cx="20" cy="4" r="1.5"/>
+<circle cx="5" cy="4" r="1"/>
+<circle cx="4" cy="9" r="1"/>
+</svg>
+
+<h3>CURIOSIDADES</h3>
+
+</div>
+
+<p>
+
+<span class="highlight">Curiosidade histórica:</span>
+Dentro da basílica existe uma sequência de medalhões com retratos de todos os papas da história da Igreja, iniciando com São Pedro e continuando até os pontífices atuais.
+
+<br><br>
+
+<span class="highlight">Cultura pop:</span>
+A história do apóstolo Paulo e dos primeiros cristãos de Roma é retratada no filme bíblico <em>"Paul, Apostle of Christ"</em> (2018).
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MODAL GALERIA -->
+
+<div class="modal" id="modal">
+
+<div class="close" onclick="closeGallery()">✕</div>
+
+<div class="slider">
+
+<div class="arrow arrow-left" onclick="prev()">❮</div>
+
+<img id="modalImg">
+
+<div class="arrow arrow-right" onclick="next()">❯</div>
+
+</div>
+
+</div>
+
+<script>
+
+const images=[
+"01-aerea.jpg",
+"02-fachada.jpg",
+"03-interior.jpg",
+"04-detalhe.jpg",
+"05-cupula.jpg"
+]
+
+let current=0
+
+function openGallery(index){
+
+current=index
+
+document.getElementById("modal").style.display="flex"
+
+document.getElementById("modalImg").src=images[current]
+
+}
+
+function closeGallery(){
+
+document.getElementById("modal").style.display="none"
+
+}
+
+function next(){
+
+current=(current+1)%images.length
+
+document.getElementById("modalImg").src=images[current]
+
+}
+
+function prev(){
+
+current=(current-1+images.length)%images.length
+
+document.getElementById("modalImg").src=images[current]
+
+}
+
+</script>
+
+</body>
+</html>

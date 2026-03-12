@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Basílica de San Clemente</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#F5A623;
+}
+
+body{
+margin:0;
+background:#0b0b0d;
+color:white;
+font-family:Inter;
+}
+
+.container{
+max-width:1500px;
+margin:auto;
+padding:30px;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+margin-bottom:25px;
+}
+
+.hero img{
+width:100%;
+height:460px;
+object-fit:cover;
+border-radius:14px;
+}
+
+.btn-voltar{
+position:absolute;
+top:-27px;
+left:-10px;
+
+padding:3px 14px;
+
+font-size:14px;
+color:var(--gold);
+text-decoration:none;
+
+backdrop-filter:blur(4px);
+
+transition:0.25s;
+}
+
+
+/* CAIXA DO TEXTO */
+
+.hero-text{
+
+position:absolute;
+bottom:40px;
+left:40px;
+
+max-width:700px;
+
+padding:12px 28px 22px 28px;	
+
+background:rgba(0,0,0,0.35);
+
+border-radius:10px;
+
+}
+
+.hero-text h1{
+font-family:Playfair Display;
+font-size:64px;
+margin:0;
+font-weight:700;
+color:var(--gold);
+
+text-shadow:0 2px 8px rgba(0,0,0,0.6);
+
+}
+
+.hero-info{
+font-size:16px;
+margin-top:10px;
+color:var(--gold);
+
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero-desc{
+margin-top:15px;
+font-size:15px;
+line-height:1.6;
+color:var(--gold);
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
+
+text-align:justify;
+}
+
+/* HEADER GALERIA */
+
+.thumb-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.thumb-title{
+font-size:18px;
+color:var(--gold);
+}
+
+/* MAPS */
+
+.map-link{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--gold);
+text-decoration:none;
+font-size:15px;
+}
+
+.map-icon{
+width:22px;
+}
+
+/* MINIATURAS */
+
+.thumbs{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+margin-top:15px;
+}
+
+.thumbs img{
+width:100%;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.thumbs img:hover{
+transform:scale(1.05);
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:25px;
+margin-top:35px;
+}
+
+.card{
+background:#15151b;
+padding:30px;
+border-radius:12px;
+min-height:320px;
+}
+
+.card-header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:10px;
+}
+
+.icon{
+width:34px;
+height:34px;
+fill:var(--gold);
+}
+
+.card h3{
+margin:0;
+font-size:18px;
+color:var(--gold);
+}
+
+.card p{
+color:#bbb;
+line-height:1.8;
+font-size:14px;
+text-align:justify;
+}
+
+.highlight{
+color:var(--gold);
+font-weight:700;
+}
+
+/* GALERIA */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.slider{
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100%;
+}
+
+.slider img{
+max-height:90vh;
+border-radius:12px;
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:60px;
+color:white;
+cursor:pointer;
+padding:20px;
+}
+
+.arrow-left{ left:40px; }
+.arrow-right{ right:40px; }
+
+.close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+cursor:pointer;
+color:white;
+z-index:10000;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<a href="../lazio/lazio.html" class="btn-voltar">
+← Voltar
+</a>
+
+<img src="02-fachada.jpg">
+
+<div class="hero-text">
+
+<h1>Basílica de San Clemente</h1>
+
+<div class="hero-info">
+Século XII • Roma • Complexo arqueológico cristão
+</div>
+
+<div class="hero-desc">
+A Basílica de San Clemente é um dos locais arqueológicos mais fascinantes de Roma. O templo atual foi construído no século XII, mas abaixo dele existem duas camadas históricas adicionais: uma igreja paleocristã do século IV e estruturas ainda mais antigas da Roma imperial.
+</div>
+
+</div>
+</div>
+
+<div class="thumb-header">
+
+<div class="thumb-title">
+Imersão Visual
+</div>
+
+<a class="map-link" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Basilica+di+San+Clemente+Roma">
+
+<svg class="map-icon" viewBox="0 0 24 24">
+
+<path fill="#F5A623"
+d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+
+<circle cx="12" cy="9" r="3" fill="black"/>
+
+</svg>
+
+Abrir no Google Maps
+
+</a>
+
+</div>
+
+<div class="thumbs">
+
+<img src="01-aerea.jpg" onclick="openGallery(0)">
+<img src="02-fachada.jpg" onclick="openGallery(1)">
+<img src="03-interior.jpg" onclick="openGallery(2)">
+<img src="04-detalhe.jpg" onclick="openGallery(3)">
+<img src="05-cupula.jpg" onclick="openGallery(4)">
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke="#F5A623" stroke-width="2" fill="none"/>
+<path d="M12 7v6l4 2" stroke="#F5A623" stroke-width="2"/>
+</svg>
+
+<h3>CONSTRUÇÃO</h3>
+
+</div>
+
+<p>
+A atual Basílica de San Clemente foi construída no século XII sobre uma igreja cristã mais antiga que datava do século IV. Escavações realizadas no século XIX revelaram que abaixo dessas estruturas existe ainda um terceiro nível pertencente à Roma imperial. Nesse nível inferior encontram-se ruínas de edifícios romanos e um antigo templo dedicado ao deus Mitra, demonstrando como o local foi utilizado por diferentes religiões ao longo dos séculos. Essa sobreposição arquitetônica faz da igreja um verdadeiro registro arqueológico da história de Roma. Cada camada do complexo representa um momento distinto da cidade, desde o período pagão até o cristianismo medieval.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2v20M5 9h14" stroke="#F5A623" stroke-width="2"/>
+</svg>
+
+<h3>FÉ E TRADIÇÃO</h3>
+
+</div>
+
+<p>
+A igreja é dedicada a São Clemente I, considerado o quarto papa da Igreja e um dos primeiros líderes do cristianismo. Segundo a tradição, Clemente foi martirizado no século I durante as perseguições romanas contra os cristãos. A basílica tornou-se um importante centro de devoção ligado à memória dos primeiros mártires da Igreja. Ao longo dos séculos peregrinos visitaram o local para honrar a figura de Clemente e celebrar a continuidade da fé cristã em Roma. O templo medieval preserva mosaicos e obras de arte que simbolizam a vitória do cristianismo sobre os cultos pagãos que existiam anteriormente naquele espaço.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2L14.5 8L21 9L16 13L17.5 20L12 17L6.5 20L8 13L3 9L9.5 8Z"/>
+</svg>
+
+<h3>CURIOSIDADES</h3>
+
+</div>
+
+<p>
+
+<span class="highlight">Curiosidade histórica:</span>
+A Basílica de San Clemente permite percorrer três níveis históricos diferentes: uma igreja medieval, uma basílica paleocristã e ruínas da Roma imperial abaixo delas.
+
+<br><br>
+
+<span class="highlight">Cultura pop:</span>
+Os cenários arqueológicos da Roma antiga inspiraram filmes históricos ambientados na cidade, como o épico <em>"Gladiator"</em> (2000), que retrata a atmosfera da Roma imperial.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MODAL GALERIA -->
+
+<div class="modal" id="modal">
+
+<div class="close" onclick="closeGallery()">✕</div>
+
+<div class="slider">
+
+<div class="arrow arrow-left" onclick="prev()">❮</div>
+
+<img id="modalImg">
+
+<div class="arrow arrow-right" onclick="next()">❯</div>
+
+</div>
+
+</div>
+
+<script>
+
+const images=[
+"01-aerea.jpg",
+"02-fachada.jpg",
+"03-interior.jpg",
+"04-detalhe.jpg",
+"05-cupula.jpg"
+]
+
+let current=0
+
+function openGallery(index){
+
+current=index
+
+document.getElementById("modal").style.display="flex"
+
+document.getElementById("modalImg").src=images[current]
+
+}
+
+function closeGallery(){
+
+document.getElementById("modal").style.display="none"
+
+}
+
+function next(){
+
+current=(current+1)%images.length
+
+document.getElementById("modalImg").src=images[current]
+
+}
+
+function prev(){
+
+current=(current-1+images.length)%images.length
+
+document.getElementById("modalImg").src=images[current]
+
+}
+
+</script>
+
+</body>
+</html>

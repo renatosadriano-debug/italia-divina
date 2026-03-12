@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Basílica de Santa Maria Maggiore</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#F5A623;
+}
+
+body{
+margin:0;
+background:#0b0b0d;
+color:white;
+font-family:Inter;
+}
+
+.container{
+max-width:1500px;
+margin:auto;
+padding:30px;
+}
+
+.hero{
+position:relative;
+margin-bottom:25px;
+}
+
+.hero img{
+width:100%;
+height:460px;
+object-fit:cover;
+border-radius:14px;
+}
+
+.hero-text{
+position:absolute;
+bottom:40px;
+left:40px;
+max-width:700px;
+padding:12px 28px 22px 28px;	
+background:rgba(0,0,0,0.35);
+border-radius:10px;
+}
+
+.hero-text h1{
+font-family:Playfair Display;
+font-size:64px;
+margin:0;
+font-weight:700;
+color:var(--gold);
+text-shadow:0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-info{
+font-size:16px;
+margin-top:10px;
+color:var(--gold);
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero-desc{
+margin-top:15px;
+font-size:15px;
+line-height:1.6;
+color:var(--gold);
+text-shadow:0 2px 6px rgba(0,0,0,0.6);
+text-align:justify;
+}
+
+.btn-voltar{
+position:absolute;
+top:-27px;
+left:-10px;
+
+padding:3px 14px;
+
+font-size:14px;
+color:var(--gold);
+text-decoration:none;
+
+backdrop-filter:blur(4px);
+
+transition:0.25s;
+}
+
+
+.thumb-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.thumb-title{
+font-size:18px;
+color:var(--gold);
+}
+
+.map-link{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--gold);
+text-decoration:none;
+font-size:15px;
+}
+
+.map-icon{
+width:22px;
+}
+
+.thumbs{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:12px;
+margin-top:15px;
+}
+
+.thumbs img{
+width:100%;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.thumbs img:hover{
+transform:scale(1.05);
+}
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:25px;
+margin-top:35px;
+}
+
+.card{
+background:#15151b;
+padding:30px;
+border-radius:12px;
+min-height:320px;
+}
+
+.card-header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:10px;
+}
+
+.icon{
+width:34px;
+height:34px;
+fill:var(--gold);
+}
+
+.card h3{
+margin:0;
+font-size:18px;
+color:var(--gold);
+}
+
+.card p{
+color:#bbb;
+line-height:1.8;
+font-size:14px;
+text-align:justify;
+}
+
+.highlight{
+color:var(--gold);
+font-weight:700;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.slider{
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:100%;
+}
+
+.slider img{
+max-height:90vh;
+border-radius:12px;
+}
+
+.arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:60px;
+color:white;
+cursor:pointer;
+padding:20px;
+}
+
+.arrow-left{ left:40px; }
+.arrow-right{ right:40px; }
+
+.close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+cursor:pointer;
+color:white;
+z-index:10000;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<a href="../lazio/lazio.html" class="btn-voltar">
+← Voltar
+</a>
+
+<img src="02-fachada.jpg">
+
+<div class="hero-text">
+
+<h1>Basílica de Santa Maria Maggiore</h1>
+
+<div class="hero-info">
+432–440 • Roma • Basílica Papal
+</div>
+
+<div class="hero-desc">
+Santa Maria Maggiore é uma das quatro grandes basílicas papais de Roma e um dos templos marianos mais importantes do cristianismo. Construída no século V na colina Esquilina, preserva mosaicos paleocristãos e séculos de arquitetura religiosa.
+</div>
+
+</div>
+</div>
+
+<div class="thumb-header">
+
+<div class="thumb-title">
+Imersão Visual
+</div>
+
+<a class="map-link" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Santa+Maria+Maggiore+Roma">
+
+<svg class="map-icon" viewBox="0 0 24 24">
+<path fill="#F5A623" d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+<circle cx="12" cy="9" r="3" fill="black"/>
+</svg>
+
+Abrir no Google Maps
+
+</a>
+
+</div>
+
+<div class="thumbs">
+
+<img src="01-aerea.jpg" onclick="openGallery(0)">
+<img src="02-fachada.jpg" onclick="openGallery(1)">
+<img src="03-interior.jpg" onclick="openGallery(2)">
+<img src="04-detalhe.jpg" onclick="openGallery(3)">
+<img src="05-cupula.jpg" onclick="openGallery(4)">
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke="#F5A623" stroke-width="2" fill="none"/>
+<path d="M12 7v6l4 2" stroke="#F5A623" stroke-width="2"/>
+</svg>
+
+<h3>CONSTRUÇÃO</h3>
+
+</div>
+
+<p>
+A Basílica de Santa Maria Maggiore foi construída no século V durante o pontificado do Papa Sisto III, logo após o Concílio de Éfeso reconhecer oficialmente Maria como Mãe de Deus. O templo foi erguido na colina Esquilina e tornou-se uma das primeiras grandes igrejas dedicadas à Virgem Maria no mundo cristão. Ao longo dos séculos a basílica recebeu diversas ampliações e intervenções arquitetônicas. Elementos medievais, renascentistas e barrocos foram incorporados à estrutura original, criando um conjunto arquitetônico extremamente rico. Apesar dessas transformações, o interior ainda preserva mosaicos paleocristãos do século V, considerados entre os mais antigos de Roma. Essas obras retratam cenas do Antigo Testamento e representam um marco da arte cristã primitiva.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2v20M5 9h14" stroke="#F5A623" stroke-width="2"/>
+</svg>
+
+<h3>FÉ E TRADIÇÃO</h3>
+
+</div>
+
+<p>
+Santa Maria Maggiore tornou-se um dos centros mais importantes da devoção mariana do mundo católico. A basílica está associada à tradição conhecida como o “Milagre da Neve”, segundo a qual a Virgem Maria teria indicado o local da construção ao fazer cair neve sobre a colina Esquilina em pleno verão romano. Esse evento é celebrado todos os anos no dia 5 de agosto com uma cerimônia simbólica dentro da igreja. Ao longo dos séculos o templo tornou-se local de peregrinação para fiéis de diversas partes do mundo. Papas também celebraram importantes liturgias marianas nesse local, reforçando seu papel espiritual na tradição da Igreja Católica.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-header">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M12 2L14.5 8L21 9L16 13L17.5 20L12 17L6.5 20L8 13L3 9L9.5 8Z"/>
+</svg>
+
+<h3>CURIOSIDADES</h3>
+
+</div>
+
+<p>
+
+<span class="highlight">Curiosidade histórica:</span>
+A Basílica de Santa Maria Maggiore está ligada à tradição do “Milagre da Neve”. Segundo a história, no século IV a Virgem Maria teria indicado o local da construção ao fazer cair neve sobre a colina Esquilina durante o verão romano.
+
+<br><br>
+
+<span class="highlight">Cultura pop:</span>
+A basílica aparece em produções cinematográficas ambientadas em Roma. Um exemplo é o filme <em>"Angels & Demons"</em> (2009), baseado no romance de Dan Brown.
+
+</p>  
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="modal">
+<div class="close" onclick="closeGallery()">✕</div>
+
+<div class="slider">
+<div class="arrow arrow-left" onclick="prev()">❮</div>
+<img id="modalImg">
+<div class="arrow arrow-right" onclick="next()">❯</div>
+</div>
+
+</div>
+
+<script>
+
+const images=[
+"01-aerea.jpg",
+"02-fachada.jpg",
+"03-interior.jpg",
+"04-detalhe.jpg",
+"05-cupula.jpg"
+]
+
+let current=0
+
+function openGallery(index){
+current=index
+document.getElementById("modal").style.display="flex"
+document.getElementById("modalImg").src=images[current]
+}
+
+function closeGallery(){
+document.getElementById("modal").style.display="none"
+}
+
+function next(){
+current=(current+1)%images.length
+document.getElementById("modalImg").src=images[current]
+}
+
+function prev(){
+current=(current-1+images.length)%images.length
+document.getElementById("modalImg").src=images[current]
+}
+
+</script>
+
+</body>
+</html>

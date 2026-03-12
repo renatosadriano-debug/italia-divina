@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Igrejas do Lázio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+
+font-family:"Playfair Display", serif;
+color:#F9AC1E;
+
+background-image:url("lazio-fundo.jpg");
+background-size:cover;
+background-position:center;
+
+position:relative;
+}
+
+/* TEXTO PRINCIPAL */
+
+.texto{
+position:absolute;
+left:2%;
+top:4%;
+width:460px;
+background:rgba(0,0,0,0.50);
+padding:20px;
+border-radius:6px;
+text-align:justify;
+}
+
+.texto h1{
+font-size:30px;
+margin:0 0 12px 0;
+}
+
+.texto p{
+font-size:15px;
+line-height:1.6;
+margin:10px 0;
+}
+
+/* MAPA */
+
+.mapa{
+position:absolute;
+left:45%;
+top:10%;
+}
+
+.mapa svg{
+width:700px;
+}
+
+/* LISTA */
+
+.lista{
+position:absolute;
+left:2%;
+bottom:8%;
+width:460px;
+background:rgba(0,0,0,0.50);
+padding:16px 18px;
+border-radius:6px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.lista h2{
+font-size:17px;
+margin:0 0 6px 0;
+}
+
+.lista ul{
+margin:0;
+padding-left:16px;
+}
+
+.lista li{
+font-size:14px;
+margin-bottom:4px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- TEXTO PRINCIPAL -->
+
+<div class="texto">
+
+<h1>As 10 Igrejas Imperdíveis do Lázio</h1>
+
+<p>
+O Lázio é muito mais do que Roma. Nesta região nasceu uma parte essencial da história do cristianismo, onde igrejas monumentais convivem com mosteiros escondidos nas montanhas e catedrais medievais preservadas há séculos.
+</p>
+
+<p>
+Neste mapa você encontrará <b>10 igrejas essenciais para qualquer roteiro pela região</b>. Algumas são ícones universais da fé e da arquitetura. Outras permanecem como <b>joias raras</b>, lugares surpreendentes que poucos viajantes descobrem.
+</p>
+
+<p>
+Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
+</p>
+
+</div>
+
+
+<!-- MAPA -->
+
+<div class="mapa">
+
+<object data="mapa-lazio.svg" type="image/svg+xml" width="700"></object>
+
+</svg>
+
+</div>
+
+
+
+<!-- LISTA -->
+
+<div class="lista">
+
+<div>
+
+<h2>Igrejas Imperdíveis</h2>
+
+<ul>
+
+<li>Roma — Basílica de São Pedro</li>
+<li>Roma — São João de Latrão</li>
+<li>Roma — Santa Maria Maggiore</li>
+<li>Roma — São Paulo Fora dos Muros</li>
+<li>Cassino — Abadia de Montecassino</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h2>Joias Raras</h2>
+
+<ul>
+
+<li>Roma — San Clemente</li>
+<li>Roma — Santa Prassede</li>
+<li>Subiaco — Mosteiro de Santa Escolástica</li>
+<li>Tivoli — Catedral de San Lorenzo</li>
+<li>Anagni — Catedral de Anagni</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>
