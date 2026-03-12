@@ -1,11 +1,10 @@
 {
   "name": "Italia Divina",
   "short_name": "Italia Divina",
-  "start_url": "capa-ebook.html",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#0b0b0d",
-  "theme_color": "#F5A623",
-  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "icon-192.png",
