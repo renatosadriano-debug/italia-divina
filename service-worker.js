@@ -1,4 +1,4 @@
-const CACHE_NAME = "italia-divina-v1";
+const CACHE_NAME = "italia-divina-v2";
 
 const urlsToCache = [
   "/",
