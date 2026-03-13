@@ -28,6 +28,36 @@ margin:auto;
 padding:30px;
 }
 
+.nav-igrejas{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:30px;
+font-family:Inter, sans-serif;
+font-size:14px;
+}
+
+.nav-igrejas a{
+text-decoration:none;
+color:#d4af37;
+padding:8px 14px;
+border:1px solid rgba(212,175,55,0.4);
+border-radius:6px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(4px);
+}
+
+.nav-igrejas a:hover{
+background:rgba(212,175,55,0.15);
+}
+
+.fade-out{
+opacity:0;
+transition:opacity .25s ease;
+}
+
 /* HERO */
 
 .hero{
@@ -254,7 +284,7 @@ z-index:10000;
 
 <div class="hero">
 
-<a href="/italia-divina/lazio/" class="btn-voltar">
+<a href="../lazio/index.html" class="btn-voltar">
 ← Voltar
 </a>
 
@@ -438,6 +468,40 @@ document.getElementById("modalImg").src=images[current]
 }
 
 </script>
+
+<script>
+
+document.addEventListener("click", function(e){
+
+const link = e.target.closest("a")
+
+if(!link) return
+
+if(link.hostname === window.location.hostname){
+
+const href = link.getAttribute("href")
+
+if(href && !href.startsWith("#") && !link.target){
+
+e.preventDefault()
+
+document.body.classList.add("fade-out")
+
+setTimeout(()=>{
+
+window.location.href = href
+
+},250)
+
+}
+
+}
+
+})
+
+</script>
+
+<script src="../church-nav.js" defer></script>
 
 </body>
 </html>

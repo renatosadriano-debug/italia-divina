@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
@@ -16,15 +17,13 @@ body{
 margin:0;
 height:100vh;
 overflow:hidden;
-
 font-family:"Playfair Display", serif;
 color:#F9AC1E;
-
 background-image:url("lazio-fundo.jpg");
 background-size:cover;
 background-position:center;
-
 position:relative;
+transition:opacity .35s ease;
 }
 
 /* TEXTO PRINCIPAL */
@@ -59,7 +58,7 @@ left:45%;
 top:10%;
 }
 
-.mapa svg{
+.mapa object{
 width:700px;
 }
 
@@ -98,9 +97,7 @@ margin-bottom:4px;
 
 </head>
 
-
 <body>
-
 
 <!-- TEXTO PRINCIPAL -->
 
@@ -122,18 +119,13 @@ Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
 
 </div>
 
-
 <!-- MAPA -->
 
 <div class="mapa">
 
-<object data="mapa-lazio.svg" type="image/svg+xml" width="700"></object>
-
-</svg>
+<object id="mapa-svg" data="mapa-lazio.svg" type="image/svg+xml"></object>
 
 </div>
-
-
 
 <!-- LISTA -->
 
@@ -144,35 +136,62 @@ Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
 <h2>Igrejas Imperdíveis</h2>
 
 <ul>
-
 <li>Roma — Basílica de São Pedro</li>
 <li>Roma — São João de Latrão</li>
 <li>Roma — Santa Maria Maggiore</li>
 <li>Roma — São Paulo Fora dos Muros</li>
 <li>Cassino — Abadia de Montecassino</li>
-
 </ul>
 
 </div>
-
 
 <div>
 
 <h2>Joias Raras</h2>
 
 <ul>
-
 <li>Roma — San Clemente</li>
 <li>Roma — Santa Prassede</li>
 <li>Subiaco — Mosteiro de Santa Escolástica</li>
 <li>Tivoli — Catedral de San Lorenzo</li>
 <li>Anagni — Catedral de Anagni</li>
-
 </ul>
 
 </div>
 
 </div>
+
+<script>
+
+const mapa = document.getElementById("mapa-svg");
+
+mapa.addEventListener("load", function(){
+
+const svgDoc = mapa.contentDocument;
+
+svgDoc.addEventListener("click", function(e){
+
+const link = e.target.closest("a");
+
+if(!link) return;
+
+e.preventDefault();
+
+let destino = link.getAttribute("href") || link.getAttribute("xlink:href");
+
+document.body.style.opacity = "0";
+
+setTimeout(function(){
+
+window.location.href = destino;
+
+},350);
+
+});
+
+});
+
+</script>
 
 </body>
 </html>

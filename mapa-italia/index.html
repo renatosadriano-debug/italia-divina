@@ -33,6 +33,10 @@ padding:0 8vw;
 overflow:hidden;
 }
 
+.fade-out{
+opacity:0;
+transition:opacity .25s ease;
+}
 
 /* CAIXA DE TEXTO */
 
@@ -139,7 +143,7 @@ Comece por Roma e inicie essa jornada. Clique no mapa.
 
 <!-- AREA CLICÁVEL DO LAZIO -->
 
-<a href="../lazio/">
+<a href="../lazio/index.html" class="link-mapa">
 
 <title>Ir para Roma</title>
 
@@ -163,6 +167,30 @@ cursor="pointer"/>
 </svg>
 
 </div>
+
+<script>
+
+document.querySelectorAll(".link-mapa").forEach(function(link){
+
+link.addEventListener("click", function(e){
+
+e.preventDefault()
+
+const destino = link.getAttribute("href")
+
+document.body.classList.add("fade-out")
+
+setTimeout(function(){
+
+window.location.href = destino
+
+},250)
+
+})
+
+})
+
+</script>
 
 </body>
 
