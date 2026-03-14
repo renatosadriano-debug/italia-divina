@@ -68,13 +68,13 @@ justify-content:center;
 
 max-width:380px;
 
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.35);
 
 padding:26px;
 
 border-radius:12px;
 
-backdrop-filter:blur(4px);
+backdrop-filter:blur(0px);
 
 }
 
@@ -135,35 +135,36 @@ max-width:420px;
 @media (max-width:900px){
 
 body{
-padding:18px;
+padding:8px 18px 18px 18px;
 align-items:flex-start;
 }
 
+/* layout vertical */
+
 .container{
-
 flex-direction:column;
-gap:18px;
-
+gap:10px;
+margin-top:-10px;
 }
 
-/* mapa primeiro */
+/* mapa */
 
 .mapa{
 order:-1;
 width:100%;
+margin-top:-10px;
 }
 
 .mapa svg{
 max-width:340px;
 }
 
-/* texto menor */
+/* texto */
 
 .texto{
-
 max-width:100%;
-padding:20px;
-
+padding:18px;
+margin-top:-6px;
 }
 
 .texto h1{
