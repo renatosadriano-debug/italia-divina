@@ -8,7 +8,7 @@
 
 <title>Mapa das Igrejas da Itália</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,9 +16,9 @@
 
 body{
 margin:0;
-height:100vh;
+min-height:100vh;
 
-font-family:"Playfair Display", serif;
+font-family:"Inter", sans-serif;
 
 background-image:url("coliseu.jpg");
 background-size:cover;
@@ -26,11 +26,10 @@ background-position:center;
 
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
 
-padding:0 8vw;
+padding:40px;
 
-overflow:hidden;
 }
 
 .fade-out{
@@ -38,17 +37,30 @@ opacity:0;
 transition:opacity .25s ease;
 }
 
-/* CAIXA DE TEXTO */
+/* CONTAINER */
+
+.container{
+
+max-width:1200px;
+width:100%;
+
+display:flex;
+gap:60px;
+align-items:center;
+
+}
+
+/* TEXTO */
 
 .texto{
 
-width:450px;
+max-width:420px;
 
-background:rgba(0,0,0,0.42);
+background:rgba(0,0,0,0.45);
 
-padding:34px 36px;
+padding:28px;
 
-border-radius:8px;
+border-radius:10px;
 
 color:#F4A81C;
 
@@ -56,27 +68,19 @@ text-align:justify;
 
 }
 
-
-/* TITULO */
-
 .texto h1{
 
-font-size:40px;
+font-family:"Playfair Display", serif;
+
+font-size:38px;
 
 line-height:1.2;
 
 margin:0;
 
-font-weight:700;
-
-letter-spacing:0.5px;
-
 color:#F9AC1E;
 
 }
-
-
-/* TEXTO */
 
 .texto p{
 
@@ -84,27 +88,85 @@ font-size:18px;
 
 line-height:1.7;
 
-margin-top:14px;
+margin-top:16px;
+
+color:#f0f0f0;
 
 }
-
 
 /* MAPA */
 
 .mapa{
 
-position:relative;
-
 width:560px;
 
 }
 
-
-/* SVG MAPA */
-
 .mapa svg{
+width:100%;
+}
 
-image-rendering:crisp-edges;
+/* INDICADOR */
+
+.indicador{
+
+margin-top:18px;
+
+font-size:15px;
+
+color:#F5A623;
+
+opacity:0.9;
+
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+.container{
+
+flex-direction:column;
+
+gap:30px;
+
+padding:0 10px;
+
+}
+
+.texto{
+
+max-width:100%;
+
+}
+
+.texto h1{
+
+font-size:34px;
+
+}
+
+.texto p{
+
+font-size:18px;
+
+}
+
+.mapa{
+
+width:100%;
+
+max-width:420px;
+
+}
+
+.indicador{
+
+text-align:center;
+
+font-size:16px;
+
+}
 
 }
 
@@ -113,6 +175,8 @@ image-rendering:crisp-edges;
 </head>
 
 <body>
+
+<div class="container">
 
 <!-- TEXTO -->
 
@@ -125,8 +189,12 @@ Da grandiosidade de Roma às joias escondidas que poucos viajantes conhecem, cad
 </p>
 
 <p>
-Comece por Roma e inicie essa jornada. Clique no mapa.
+Comece por Roma e inicie essa jornada.
 </p>
+
+<div class="indicador">
+Toque na região do mapa para explorar
+</div>
 
 </div>
 
@@ -134,14 +202,9 @@ Comece por Roma e inicie essa jornada. Clique no mapa.
 
 <div class="mapa">
 
-<svg viewBox="0 0 600 900" width="560">
-
-<!-- MAPA DA ITÁLIA -->
+<svg viewBox="0 0 600 900">
 
 <image href="mapa-italia-transparente.png" width="600" height="900"/>
-
-
-<!-- AREA CLICÁVEL DO LAZIO -->
 
 <a href="../lazio/index.html" class="link-mapa">
 
@@ -165,6 +228,8 @@ cursor="pointer"/>
 </a>
 
 </svg>
+
+</div>
 
 </div>
 
@@ -193,5 +258,4 @@ window.location.href = destino
 </script>
 
 </body>
-
 </html>
