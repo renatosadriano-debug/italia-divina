@@ -1,8 +1,10 @@
 {
 "name": "Italia Divina",
 "short_name": "Italia Divina",
-"start_url": "index.html",
+
+"start_url": "/italia-divina/",
 "display": "standalone",
+
 "background_color": "#000000",
 "theme_color": "#000000",
 
