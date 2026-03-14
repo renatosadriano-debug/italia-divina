@@ -2,8 +2,8 @@
   "name": "Italia Divina",
   "short_name": "Italia Divina",
 
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/italia-divina/",
+  "scope": "/italia-divina/",
 
   "display": "standalone",
 
