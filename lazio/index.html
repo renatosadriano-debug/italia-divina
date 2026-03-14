@@ -25,7 +25,7 @@ position:relative;
 transition:opacity .35s ease;
 }
 
-/* TEXTO PRINCIPAL */
+/* TEXTO */
 
 .texto{
 position:absolute;
@@ -43,10 +43,18 @@ font-size:30px;
 margin:0 0 12px 0;
 }
 
-.texto p{
+/* TEXTO DESKTOP */
+
+.texto-desktop p{
 font-size:15px;
 line-height:1.6;
 margin:10px 0;
+}
+
+/* TEXTO MOBILE */
+
+.texto-mobile{
+display:none;
 }
 
 /* MAPA */
@@ -90,128 +98,57 @@ padding-left:16px;
 .lista li{
 font-size:14px;
 margin-bottom:4px;
+cursor:pointer;
 }
 
-/* ========================= */
-/* MOBILE RESPONSIVO */
-/* ========================= */
-
-/* MOBILE OTIMIZADO SEM SCROLL */
+/* ================= */
+/* MOBILE */
+/* ================= */
 
 @media (max-width:900px){
 
-body{
-overflow:hidden;
+.texto-desktop{
+display:none;
 }
 
-/* TEXTO */
+.texto-mobile{
+display:block;
+font-size:14px;
+line-height:1.4;
+}
 
 .texto{
-left:3%;
+width:92%;
+left:4%;
 top:2%;
-width:94%;
-height:28vh;
 padding:14px;
 }
 
 .texto h1{
-font-size:20px;
+font-size:22px;
 }
-
-.texto p{
-font-size:12px;
-line-height:1.3;
-}
-
-/* MAPA */
 
 .mapa{
 left:50%;
-top:33vh;
+top:32%;
 transform:translateX(-50%);
 }
 
 .mapa object{
-width:300px;
+width:320px;
 }
-
-/* LISTA */
 
 .lista{
-left:3%;
+left:4%;
 bottom:2%;
-width:94%;
-height:30vh;
-padding:12px;
-gap:6px;
-}
-
-.lista h2{
-font-size:14px;
+width:92%;
+grid-template-columns:1fr;
 }
 
 .lista li{
-font-size:11px;
-}
-
-}/* MOBILE OTIMIZADO SEM SCROLL */
-
-@media (max-width:900px){
-
-body{
-overflow:hidden;
-}
-
-/* TEXTO */
-
-.texto{
-left:3%;
-top:2%;
-width:94%;
-height:28vh;
-padding:14px;
-}
-
-.texto h1{
-font-size:20px;
-}
-
-.texto p{
-font-size:12px;
-line-height:1.3;
-}
-
-/* MAPA */
-
-.mapa{
-left:50%;
-top:33vh;
-transform:translateX(-50%);
-}
-
-.mapa object{
-width:300px;
-}
-
-/* LISTA */
-
-.lista{
-left:3%;
-bottom:2%;
-width:94%;
-height:30vh;
-padding:12px;
-gap:6px;
-}
-
-.lista h2{
-font-size:14px;
-}
-
-.lista li{
-font-size:11px;
-}
-
+padding:8px;
+background:rgba(255,255,255,0.05);
+border-radius:4px;
 }
 
 }
@@ -222,11 +159,13 @@ font-size:11px;
 
 <body>
 
-<!-- TEXTO PRINCIPAL -->
+<!-- TEXTO -->
 
 <div class="texto">
 
 <h1>As 10 Igrejas Imperdíveis do Lázio</h1>
+
+<div class="texto-desktop">
 
 <p>
 O Lázio é muito mais do que Roma. Nesta região nasceu uma parte essencial da história do cristianismo, onde igrejas monumentais convivem com mosteiros escondidos nas montanhas e catedrais medievais preservadas há séculos.
@@ -239,6 +178,18 @@ Neste mapa você encontrará <b>10 igrejas essenciais para qualquer roteiro pela
 <p>
 Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
 </p>
+
+</div>
+
+<div class="texto-mobile">
+
+10 igrejas essenciais do Lázio<br><br>
+
+Toque no mapa para explorar<br>
+as basílicas históricas de Roma<br>
+e tesouros escondidos da região.
+
+</div>
 
 </div>
 
@@ -259,11 +210,11 @@ Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
 <h2>Igrejas Imperdíveis</h2>
 
 <ul>
-<li>Roma — Basílica de São Pedro</li>
-<li>Roma — São João de Latrão</li>
-<li>Roma — Santa Maria Maggiore</li>
-<li>Roma — São Paulo Fora dos Muros</li>
-<li>Cassino — Abadia de Montecassino</li>
+<li onclick="abrir('../sao-pedro/index.html')">Roma — Basílica de São Pedro</li>
+<li onclick="abrir('../sao-joao-latrao/index.html')">Roma — São João de Latrão</li>
+<li onclick="abrir('../santa-maria-maggiore/index.html')">Roma — Santa Maria Maggiore</li>
+<li onclick="abrir('../sao-paulo-fora-dos-muros/index.html')">Roma — São Paulo Fora dos Muros</li>
+<li onclick="abrir('../montecassino/index.html')">Cassino — Abadia de Montecassino</li>
 </ul>
 
 </div>
@@ -273,11 +224,11 @@ Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
 <h2>Joias Raras</h2>
 
 <ul>
-<li>Roma — San Clemente</li>
-<li>Roma — Santa Prassede</li>
-<li>Subiaco — Mosteiro de Santa Escolástica</li>
-<li>Tivoli — Catedral de San Lorenzo</li>
-<li>Anagni — Catedral de Anagni</li>
+<li onclick="abrir('../san-clemente/index.html')">Roma — San Clemente</li>
+<li onclick="abrir('../santa-prassede/index.html')">Roma — Santa Prassede</li>
+<li onclick="abrir('../mosteiro-santa-escolastica/index.html')">Subiaco — Mosteiro de Santa Escolástica</li>
+<li onclick="abrir('../catedral-san-lorenzo-tivoli/index.html')">Tivoli — Catedral de San Lorenzo</li>
+<li onclick="abrir('../catedral-anagni/index.html')">Anagni — Catedral de Anagni</li>
 </ul>
 
 </div>
@@ -286,31 +237,58 @@ Explore o mapa e comece sua jornada pelas igrejas mais fascinantes do Lázio.
 
 <script>
 
-const mapa = document.getElementById("mapa-svg");
+function abrir(url){
 
-mapa.addEventListener("load", function(){
-
-const svgDoc = mapa.contentDocument;
-
-svgDoc.addEventListener("click", function(e){
-
-const link = e.target.closest("a");
-
-if(!link) return;
-
-e.preventDefault();
-
-let destino = link.getAttribute("href") || link.getAttribute("xlink:href");
-
-document.body.style.opacity = "0";
+document.body.style.opacity="0";
 
 setTimeout(function(){
 
-window.location.href = destino;
+window.location.href=url;
 
 },350);
 
+}
+
+/* HOTSPOTS INVISÍVEIS NO SVG */
+
+const mapa = document.getElementById("mapa-svg");
+
+mapa.addEventListener("load",function(){
+
+const svgDoc = mapa.contentDocument;
+const svg = svgDoc.querySelector("svg");
+
+function hotspot(x,y,link){
+
+let c = svgDoc.createElementNS("http://www.w3.org/2000/svg","circle");
+
+c.setAttribute("cx",x);
+c.setAttribute("cy",y);
+c.setAttribute("r","28");
+
+c.setAttribute("fill","transparent");
+c.style.cursor="pointer";
+
+c.addEventListener("click",function(){
+abrir(link);
 });
+
+svg.appendChild(c);
+
+}
+
+/* COORDENADAS APROXIMADAS */
+
+hotspot(310,480,"../sao-pedro/index.html");
+hotspot(320,510,"../sao-joao-latrao/index.html");
+hotspot(295,530,"../santa-maria-maggiore/index.html");
+hotspot(335,525,"../sao-paulo-fora-dos-muros/index.html");
+hotspot(350,495,"../san-clemente/index.html");
+hotspot(360,475,"../santa-prassede/index.html");
+hotspot(420,460,"../mosteiro-santa-escolastica/index.html");
+hotspot(445,490,"../catedral-san-lorenzo-tivoli/index.html");
+hotspot(510,520,"../catedral-anagni/index.html");
+hotspot(580,560,"../montecassino/index.html");
 
 });
 
