@@ -16,9 +16,9 @@
 
 body{
 margin:0;
-height:100vh;
+min-height:100vh;
 
-font-family:"Playfair Display", serif;
+font-family:"Inter", sans-serif;
 
 background-image:url("coliseu.jpg");
 background-size:cover;
@@ -26,11 +26,10 @@ background-position:center;
 
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
 
-padding:0 8vw;
+padding:40px;
 
-overflow:hidden;
 }
 
 .fade-out{
@@ -38,17 +37,30 @@ opacity:0;
 transition:opacity .25s ease;
 }
 
+/* CONTAINER */
+
+.container{
+
+max-width:1200px;
+width:100%;
+
+display:flex;
+gap:60px;
+align-items:center;
+
+}
+
 /* TEXTO */
 
 .texto{
 
-width:450px;
+max-width:420px;
 
-background:rgba(0,0,0,0.42);
+background:rgba(0,0,0,0.45);
 
-padding:34px 36px;
+padding:28px;
 
-border-radius:8px;
+border-radius:10px;
 
 color:#F4A81C;
 
@@ -58,11 +70,14 @@ text-align:justify;
 
 .texto h1{
 
-font-size:40px;
+font-family:"Playfair Display", serif;
+
+font-size:38px;
+
 line-height:1.2;
+
 margin:0;
-font-weight:700;
-letter-spacing:0.5px;
+
 color:#F9AC1E;
 
 }
@@ -70,8 +85,12 @@ color:#F9AC1E;
 .texto p{
 
 font-size:18px;
+
 line-height:1.7;
-margin-top:14px;
+
+margin-top:16px;
+
+color:#f0f0f0;
 
 }
 
@@ -79,46 +98,47 @@ margin-top:14px;
 
 .mapa{
 
-position:relative;
 width:560px;
 
 }
 
 .mapa svg{
-image-rendering:crisp-edges;
+width:100%;
 }
 
-/* 📱 AJUSTES SOMENTE PARA CELULAR */
+/* INDICADOR */
 
-@media (max-width:768px){
+.indicador{
 
-body{
+margin-top:18px;
+
+font-size:15px;
+
+color:#F5A623;
+
+opacity:0.9;
+
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+.container{
 
 flex-direction:column;
-justify-content:center;
-align-items:center;
 
-padding:20px;
+gap:30px;
+
+padding:0 10px;
 
 }
-
-/* caixa de texto menor */
 
 .texto{
 
-width:90%;
-
-padding:24px;
-
-border-radius:14px;
-
-background:rgba(0,0,0,0.55);
-
-backdrop-filter:blur(6px);
+max-width:100%;
 
 }
-
-/* título menor */
 
 .texto h1{
 
@@ -126,37 +146,25 @@ font-size:34px;
 
 }
 
-/* texto confortável */
-
 .texto p{
 
 font-size:18px;
 
 }
 
-/* mapa sobe e ganha contraste */
-
 .mapa{
 
-margin-top:20px;
+width:100%;
 
-padding:14px;
-
-background:rgba(0,0,0,0.35);
-
-border-radius:14px;
-
-backdrop-filter:blur(6px);
+max-width:420px;
 
 }
 
-/* mapa menor e visível */
+.indicador{
 
-.mapa svg{
+text-align:center;
 
-width:260px;
-
-filter:brightness(1.4) contrast(1.2);
+font-size:16px;
 
 }
 
@@ -167,6 +175,8 @@ filter:brightness(1.4) contrast(1.2);
 </head>
 
 <body>
+
+<div class="container">
 
 <!-- TEXTO -->
 
@@ -179,8 +189,12 @@ Da grandiosidade de Roma às joias escondidas que poucos viajantes conhecem, cad
 </p>
 
 <p>
-Comece por Roma e inicie essa jornada. Clique no mapa.
+Comece por Roma e inicie essa jornada.
 </p>
+
+<div class="indicador">
+Toque na região do mapa para explorar
+</div>
 
 </div>
 
@@ -188,7 +202,7 @@ Comece por Roma e inicie essa jornada. Clique no mapa.
 
 <div class="mapa">
 
-<svg viewBox="0 0 600 900" width="560">
+<svg viewBox="0 0 600 900">
 
 <image href="mapa-italia-transparente.png" width="600" height="900"/>
 
@@ -214,6 +228,8 @@ cursor="pointer"/>
 </a>
 
 </svg>
+
+</div>
 
 </div>
 
