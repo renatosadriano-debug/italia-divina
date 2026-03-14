@@ -32,6 +32,18 @@ padding:40px;
 
 }
 
+/* ESCURECER FUNDO */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.35);
+z-index:-1;
+}
+
+/* FADE */
+
 .fade-out{
 opacity:0;
 transition:opacity .25s ease;
@@ -47,6 +59,7 @@ width:100%;
 display:flex;
 gap:60px;
 align-items:center;
+justify-content:center;
 
 }
 
@@ -58,13 +71,13 @@ max-width:420px;
 
 background:rgba(0,0,0,0.45);
 
-padding:28px;
+padding:30px;
 
-border-radius:10px;
+border-radius:14px;
+
+backdrop-filter:blur(4px);
 
 color:#F4A81C;
-
-text-align:justify;
 
 }
 
@@ -72,9 +85,9 @@ text-align:justify;
 
 font-family:"Playfair Display", serif;
 
-font-size:38px;
+font-size:40px;
 
-line-height:1.2;
+line-height:1.15;
 
 margin:0;
 
@@ -86,11 +99,25 @@ color:#F9AC1E;
 
 font-size:18px;
 
-line-height:1.7;
+line-height:1.6;
 
-margin-top:16px;
+margin-top:18px;
 
-color:#f0f0f0;
+color:#eaeaea;
+
+}
+
+/* INDICADOR */
+
+.indicador{
+
+margin-top:20px;
+
+font-size:16px;
+
+color:#F5A623;
+
+opacity:0.9;
 
 }
 
@@ -100,23 +127,55 @@ color:#f0f0f0;
 
 width:560px;
 
+display:flex;
+flex-direction:column;
+align-items:center;
+
 }
+
+/* CARD DO MAPA */
+
+.mapa-card{
+
+background:rgba(0,0,0,0.45);
+
+padding:22px;
+
+border-radius:16px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+
+backdrop-filter:blur(4px);
+
+}
+
+/* SVG */
 
 .mapa svg{
 width:100%;
+max-width:420px;
+display:block;
 }
 
-/* INDICADOR */
+/* REGIÃO INTERATIVA */
 
-.indicador{
+.regiao-lazio{
 
-margin-top:18px;
+fill:rgba(255,215,0,0.55);
+stroke:#FFD700;
+stroke-width:2;
 
-font-size:15px;
+animation:pulse 2.4s infinite;
 
-color:#F5A623;
+}
 
-opacity:0.9;
+@keyframes pulse{
+
+0%{opacity:1}
+
+50%{opacity:.6}
+
+100%{opacity:1}
 
 }
 
@@ -124,48 +183,46 @@ opacity:0.9;
 
 @media (max-width:900px){
 
+body{
+padding:20px;
+align-items:flex-start;
+}
+
 .container{
 
 flex-direction:column;
 
-gap:30px;
+gap:28px;
 
-padding:0 10px;
+}
 
+/* MAPA VEM PRIMEIRO NO MOBILE */
+
+.mapa{
+order:-1;
+width:100%;
 }
 
 .texto{
-
 max-width:100%;
-
+padding:26px;
 }
 
 .texto h1{
-
-font-size:34px;
-
+font-size:32px;
 }
 
 .texto p{
-
-font-size:18px;
-
+font-size:17px;
 }
 
-.mapa{
-
-width:100%;
-
-max-width:420px;
-
+.mapa svg{
+max-width:360px;
 }
 
 .indicador{
-
 text-align:center;
-
 font-size:16px;
-
 }
 
 }
@@ -185,7 +242,7 @@ font-size:16px;
 <h1>Descubra as Igrejas mais impressionantes da Itália</h1>
 
 <p>
-Da grandiosidade de Roma às joias escondidas que poucos viajantes conhecem, cada região da Itália guarda igrejas que atravessaram séculos de arte, fé e história.
+Explore as regiões da Itália e descubra igrejas que atravessaram séculos de fé, arte e história.
 </p>
 
 <p>
@@ -202,6 +259,8 @@ Toque na região do mapa para explorar
 
 <div class="mapa">
 
+<div class="mapa-card">
+
 <svg viewBox="0 0 600 900">
 
 <image href="mapa-italia-transparente.png" width="600" height="900"/>
@@ -211,6 +270,7 @@ Toque na região do mapa para explorar
 <title>Ir para Roma</title>
 
 <path
+class="regiao-lazio"
 d="M270 380
 L310 380
 L350 380
@@ -221,13 +281,13 @@ L290 480
 L250 430
 L260 380 Z"
 
-fill="transparent"
-stroke="none"
 cursor="pointer"/>
 
 </a>
 
 </svg>
+
+</div>
 
 </div>
 
